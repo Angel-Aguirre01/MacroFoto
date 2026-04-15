@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacroFoto - Iniciar Sesión</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#333;display:flex;flex-direction:column;min-height:100vh;}
+header{background:#0d1b2a;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;}
+header h1{color:#e0a80d;}
+nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:500;}
+nav a:hover{color:#e0a80d;}
+section{flex:1;display:flex;justify-content:center;align-items:center;padding:40px;}
+.form{background:#fff;padding:30px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);width:100%;max-width:400px;}
+.form input,.form button{width:100%;padding:12px;margin:10px 0;border-radius:5px;border:1px solid #ccc;}
+.form button{background:#0d1b2a;color:#fff;font-weight:600;cursor:pointer;}
+footer{background:#0d1b2a;color:#fff;text-align:center;padding:20px;}
+</style>
+<script>
+function login(e){
+ e.preventDefault();
+ const email=document.getElementById('email').value;
+ const password=document.getElementById('password').value;
+ if(email==='admin@macrofoto.com' && password==='12345'){
+   alert('Inicio de sesión exitoso');
+ }else{
+   alert('Correo o contraseña incorrectos');
+ }
+}
+</script>
+</head>
+<body>
+<header>
+<h1>MacroFoto</h1>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="servicios.html">Servicios</a>
+<a href="productos.html">Productos</a>
+<a href="accesorios.html">Accesorios</a>
+<a href="contacto.html">Dónde Encontrarnos</a>
+<a href="login.html">Iniciar Sesión</a>
+<a href="negocio.html">Tu Negocio</a>
+</nav>
+</header>
+<section>
+<div class="form">
+<h2 style="text-align:center;">Iniciar Sesión</h2>
+<form onsubmit="login(event)">
+<input type="email" id="email" placeholder="Correo electrónico" required>
+<input type="password" id="password" placeholder="Contraseña" required>
+<button type="submit">Ingresar</button>
+</form>
+</div>
+</section>
+<footer>
+<p>&copy; 2026 MacroFoto. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
